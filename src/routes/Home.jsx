@@ -1,11 +1,6 @@
 import React from "react";
 import {
   ArrowRightAltRounded,
-  BugReportRounded,
-  Computer,
-  PeopleAltRounded,
-  WaterfallChartRounded,
-  Savings,
   Folder,
   Contacts,
   Article,
@@ -16,20 +11,12 @@ import {
   Typography,
   Button,
   Stack,
-  IconButton,
 } from "@mui/material";
-import {
-  faYoutube,
-  faTwitch,
-  faTwitter,
-  faDiscord,
-  faTiktok,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { IconCard } from "../components/IconCard";
 import { Link } from "react-router-dom";
 
-import VideoCard from "../components/VideoCard";
+
 
 const Home = () => {
   const gradientText = {
@@ -45,8 +32,8 @@ const Home = () => {
       color: "#fff",
       textDecoration: "none",
     },
-    redLink: {
-      color: "#d32f2f",
+    greenLink: {
+      color: "#5B8C5A",
       textDecoration: "none",
     },
     footerHeading: {
@@ -103,14 +90,14 @@ const Home = () => {
             </Typography>
             <Stack direction="row" gap={2}>
               <Button
-                color="error"
+                color="success"
                 variant="outlined"
                 endIcon={<ArrowRightAltRounded />}
                 sx={{ mt: 3 }}
                 size="large"
                 disableElevation
               >
-                <Link to="/portfolio" style={textStyles.redLink}>
+                <Link to="/portfolio" style={textStyles.greenLink}>
                   Portfolio
                 </Link>
               </Button>
