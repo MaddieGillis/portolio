@@ -60,7 +60,7 @@ const NavigationBar = () => {
             onKeyDown={toggleDrawer(false)}
         >
             <List>
-                {['Home', 'Portfolio', 'Contact'].map((text) => (
+                {['Home', 'Portfolio', 'Contact', 'Resume'].map((text) => (
                     <ListItem
                         key={text}
                         disablePadding
@@ -83,40 +83,6 @@ const NavigationBar = () => {
                 ))}
             </List>
             <Divider />
-            <List>
-                {['Contact Us', 'Support Us'].map((text, index) => (
-                    <ListItem
-                        key={text}
-                        disablePadding
-                    >
-                        <Link
-                            to={`/${text.toLowerCase().split(" ")[0]}`}
-                            style={{ textDecoration: 'none', width: '100%' }}
-                        >
-                            <ListItemButton
-                                sx={{
-                                    color: 'black',
-                                }}
-                            >
-                                <ListItemIcon>
-                                    {index === 0
-                                        ? <PhoneIphone
-                                            sx={{ color: '#d32f2f' }}
-                                        />
-                                        : <VolunteerActivism
-                                            sx={{ color: '#d32f2f' }}
-                                        />}
-                                </ListItemIcon>
-                                {index === 0
-                                    ? <ListItemText primary={text} secondary='Ask a question' />
-                                    : <ListItemText primary={text} secondary='Set up donations' />
-                                }
-
-                            </ListItemButton>
-                        </Link>
-                    </ListItem>
-                ))}
-            </List>
         </Box >)
 
 
@@ -202,7 +168,7 @@ const NavigationBar = () => {
                                 to="/resume"
                             >
                                 <Button color='inherit'>
-                                    Reusme
+                                    Resume
                                 </Button>
                             </Link>
 

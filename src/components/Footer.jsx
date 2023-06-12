@@ -1,8 +1,7 @@
 import React from "react";
 
 import {
-    PhoneAndroidRounded,
-    VolunteerActivism,
+    PhoneAndroidRounded
 } from "@mui/icons-material";
 import {
     Grid,
@@ -40,7 +39,7 @@ const Footer = () => {
                 maxWidth='xxl'
                 sx={{
                     // bgcolor: '#02182B',
-                    bgcolor: '#000000',
+                    bgcolor: '#985277',
                     py: 10
                 }}
             >
@@ -61,14 +60,9 @@ const Footer = () => {
                                 variant="h5"
                                 style={textStyles.footerHeading}
                             >
-                                Grim Vision Studios
+                                Madeline Gillis Portfolio
                             </Typography>
-                            <Typography
-                                variant="body1"
-                                style={textStyles.footerText}
-                            >
-                            Embrace Darkness
-                            </Typography>
+                            
                         </Grid>
                         <Grid
                             item
@@ -91,26 +85,26 @@ const Footer = () => {
                                     Home
                                 </Link>
                                 <Link
-                                    to='/about'
+                                    to='/portfolio'
                                     style={textStyles.link}
                                     variant='text'
                                 >
-                                    About
+                                    Portfolio
                                 </Link>
                                 <Link
-                                    to='/games'
+                                    to='/contact'
                                     style={textStyles.link}
                                     variant='text'
                                 >
-                                    Games
+                                    Contact
                                 </Link>
-                                {/* <Link
-                                    to='/community'
+                                <Link
+                                    to='/resume'
                                     style={textStyles.link}
                                     variant='text'
                                 >
-                                    Community
-                                </Link> */}
+                                    Resume
+                                </Link>
                             </Stack>
                         </Grid>
                         <Grid
@@ -124,22 +118,16 @@ const Footer = () => {
                                     variant='h5'
                                     style={textStyles.footerHeading}
                                 >
-                                    Legal
+                                    Links
                                 </Typography>
                                 <Link
-                                    to='/privacy'
+                                    to=''
                                     style={textStyles.link}
                                     variant='text'
                                 >
-                                    Privacy
+                                    Github
                                 </Link>
-                                <Link
-                                    to='/tos'
-                                    style={textStyles.link}
-                                    variant='text'
-                                >
-                                    Terms of Service
-                                </Link>
+
                             </Stack>
                         </Grid>
                         <Grid
@@ -148,41 +136,18 @@ const Footer = () => {
                             xs={12}
                         >
                             <Stack spacing={1}>
-                            <a href="mailto:officialgrimvision@gmail.com">
+                            <a href="mailto:madelinegillis@outlook.com">
                                  <Button
                                     variant='contained'
-                                    color='error'
+                                    color='success'
                                     endIcon={<PhoneAndroidRounded />}
                                     >
-                                Contact Us
+                                Contact Me
                                 </Button>
                             </a>
-                                <a href="https://www.patreon.com/grimvisionstudios">
-                                <Button
-                                     variant='contained'
-                                    color='error'
-                                    endIcon={<VolunteerActivism />}
-                                >
-                                Patreon
-                                </Button>
-                                </a>
                             </Stack>
                         </Grid>
                     </Grid>
-                </Container>
-            </Container>
-            <Container
-                maxWidth='xxl'
-                sx={{
-                    // bgcolor: '#061F35',
-                    bgcolor: '#131313',
-                    py: 3
-                }}
-            >
-                <Container maxWidth='xl'>
-                    <Typography style={textStyles.link}>
-                        All rights reserved © 2023 Grim Vision Studios
-                    </Typography>
                 </Container>
             </Container>
         </>
