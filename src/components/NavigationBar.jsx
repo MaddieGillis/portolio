@@ -29,13 +29,10 @@ import ChevronLeftRounded from "@mui/icons-material/ChevronLeftRounded";
 import { Routes, Route, Link } from 'react-router-dom';
 
 // ROUTES
-import Home from '../routes/Home';
-import About from '../routes/About';
-import Community from '../routes/Community';
-import Games from '../routes/Games';
-import Support from "../routes/Support";
-import Privacy from "../routes/Privacy";
-import Tos from "../routes/Tos";
+import Home from "../routes/Home";
+import Portfolio from "../routes/Portfolio";
+import Contact from "../routes/Contact";
+import Resume from "../routes/Resume";
 
 const NavigationBar = () => {
 
@@ -63,7 +60,7 @@ const NavigationBar = () => {
             onKeyDown={toggleDrawer(false)}
         >
             <List>
-                {['Home', 'About', 'Games'].map((text) => (
+                {['Home', 'Portfolio', 'Contact', 'Resume'].map((text) => (
                     <ListItem
                         key={text}
                         disablePadding
@@ -86,40 +83,6 @@ const NavigationBar = () => {
                 ))}
             </List>
             <Divider />
-            <List>
-                {['Contact Us', 'Support Us'].map((text, index) => (
-                    <ListItem
-                        key={text}
-                        disablePadding
-                    >
-                        <Link
-                            to={`/${text.toLowerCase().split(" ")[0]}`}
-                            style={{ textDecoration: 'none', width: '100%' }}
-                        >
-                            <ListItemButton
-                                sx={{
-                                    color: 'black',
-                                }}
-                            >
-                                <ListItemIcon>
-                                    {index === 0
-                                        ? <PhoneIphone
-                                            sx={{ color: '#d32f2f' }}
-                                        />
-                                        : <VolunteerActivism
-                                            sx={{ color: '#d32f2f' }}
-                                        />}
-                                </ListItemIcon>
-                                {index === 0
-                                    ? <ListItemText primary={text} secondary='Ask a question' />
-                                    : <ListItemText primary={text} secondary='Set up donations' />
-                                }
-
-                            </ListItemButton>
-                        </Link>
-                    </ListItem>
-                ))}
-            </List>
         </Box >)
 
 
@@ -127,8 +90,7 @@ const NavigationBar = () => {
         <>
             <AppBar
                 sx={{
-                    // bgcolor: '#02182B',
-                    bgcolor: '#000000',
+                    bgcolor: '#FCD3DE',
                 }}
                 // position='static'
                 component='nav'
@@ -165,7 +127,7 @@ const NavigationBar = () => {
                                     color='white'
                                     sx={{ textAlign: { xs: 'center', md: 'left' } }}
                                 >
-                                    Grim Vision Studios
+                                    Madeline Gillis Portfolio
                                 </Typography>
                             </Link>
                         </Box>
@@ -182,45 +144,35 @@ const NavigationBar = () => {
                                 to="/"
                             >
                                 <Button color='inherit'>
-                                    Home
+                                    About Me
                                 </Button>
                             </Link>
                             <Link
                                 style={styles.link}
-                                to="/about"
+                                to="/portfolio"
                             >
                                 <Button color='inherit'>
-                                    About
+                                    Portfolio
                                 </Button>
                             </Link>
                             <Link
                                 style={styles.link}
-                                to="/games"
+                                to="/contact"
                             >
                                 <Button color='inherit'>
-                                    Games
+                                    Contact
                                 </Button>
                             </Link>
-                            {/* <Link
-                                style={styles.link}
-                                to="/community"
-                            >
-                                <Button color='inherit'>
-                                    Community
-                                </Button>
-                            </Link> */}
                             <Link
                                 style={styles.link}
-                                to="/support"
+                                to="/resume"
                             >
-                                <Button
-                                    color='error'
-                                    variant='contained'
-                                    endIcon={<VolunteerActivism />}
-                                >
-                                    Support Us
+                                <Button color='inherit'>
+                                    Resume
                                 </Button>
                             </Link>
+
+
                             <IconButton>
 
                             </IconButton>
@@ -246,13 +198,10 @@ const NavigationBar = () => {
             </AppBar>
             <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/grim-vision-studios' element={<Home />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/games' element={<Games />} />
-                <Route path='/community' element={<Community />} />
-                <Route path='/support' element={<Support />} />
-                <Route path='/privacy' element={<Privacy />} />
-                <Route path='/tos' element={<Tos />} />
+                <Route path='/about' element={<Home />} />
+                <Route path='/portfolio' element={<Portfolio />} />
+                <Route path='/contact' element={<Contact />} />
+                <Route path='/resume' element={<Resume />} />
             </Routes>
         </>
     );
